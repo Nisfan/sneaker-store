@@ -33,16 +33,18 @@ const Wrapper = styled.div`
   padding: 0 32px;
   background-color: var(--gray-900);
   color: var(--white);
+  gap: 24px;
 `;
 
 const ActionsWrapper = styled.div`
-  display: flex;
   margin-left: auto;
-  gap: 24px;
+  display: flex;
+  align-items: center;
 `;
 
 const CartIconWrapper = styled.a`
   position: relative;
+  display: flex;
 `;
 
 const CartItemsCount = styled.div`
