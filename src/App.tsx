@@ -113,10 +113,14 @@ function App() {
         <SecondCol>
           <ColumnHeader>
             <Title>Running</Title>
-            <SelectInput
-              defaultValue="First Item"
-              options={["First Item", "Second Item", "Very Long Item"]}
-            />
+
+            <LabelWrapper>
+              Sort
+              <SelectInput
+                defaultValue="First Item"
+                options={["First Item", "Second Item", "Very Long Item"]}
+              />
+            </LabelWrapper>
           </ColumnHeader>
           <Body>
             <ProductList>
@@ -132,6 +136,12 @@ function App() {
     </>
   );
 }
+
+const LabelWrapper = styled.label`
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+`;
 
 const FullHeader = styled.div`
   margin: 0 -32px;
@@ -158,7 +168,7 @@ const SecondCol = styled.div`
 const ColumnHeader = styled.div`
   display: flex;
   height: 40px;
-  align-items: center;
+  align-items: baseline;
 `;
 
 const Title = styled.h2`
